@@ -1,0 +1,40 @@
+# Virtual environments
+venv/
+.env
+.env.local
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# C extensions
+*.so
+
+# Packages
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Node modules
+node_modules/
+
+# Logs
+*.log
+
+# Cache files
+*.cache
+*.bak
+
+
+# IDE/editor files
+.vscode/
+.idea/
