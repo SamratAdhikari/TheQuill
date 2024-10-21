@@ -106,6 +106,7 @@ export default function Home() {
 
         if (canvas) {
             setLoading(true);
+            console.log(import.meta.env.VITE_API_URL);
             const response = await axios({
                 method: "post",
                 url: `${import.meta.env.VITE_API_URL}/calculate`,
