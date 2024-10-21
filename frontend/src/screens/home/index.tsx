@@ -264,7 +264,7 @@ export default function Home() {
                     <Draggable
                         key={index}
                         defaultPosition={latexPosition}
-                        onStop={(e, data) =>
+                        onStop={(_e, data) =>
                             setLatexPosition({ x: data.x, y: data.y })
                         }
                     >
