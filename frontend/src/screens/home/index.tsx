@@ -216,26 +216,19 @@ export default function Home() {
 
     return (
         <>
-            <div className="flex justify-center items-center">
+            {/* Reset and Calculate Buttons - Positioned on Top Right */}
+            <div className="absolute top-0 right-0 flex gap-3 m-5">
+                {/* Reset Button */}
                 <Button
                     onClick={() => setReset(true)}
-                    className="z-20 bg-red-800 text-white text-xl w-40 p-6 border rounded-lg" // Adjust width here
+                    className="z-20 bg-red-800 text-white text-xl w-40 p-6 border rounded-lg"
                     variant="default"
                     color="black"
                 >
                     Reset
                 </Button>
 
-                <Group className="z-20 mx-24 bg-gray-700 p-2 border rounded-lg">
-                    {SWATCHES.map((swatchColor: string) => (
-                        <ColorSwatch
-                            key={swatchColor}
-                            color={swatchColor}
-                            onClick={() => setColor(swatchColor)}
-                        />
-                    ))}
-                </Group>
-
+                {/* Calculate Button */}
                 <Button
                     onClick={sendData}
                     className="z-20 bg-green-800 text-white text-xl w-40 p-6 border rounded-lg"
@@ -248,6 +241,24 @@ export default function Home() {
                         "Calculate"
                     )}
                 </Button>
+            </div>
+
+            {/* Container for Logo and Color Swatches */}
+            <div className="z-20 absolute left-0 m-5 flex flex-col gap-4">
+                {/* Logo Image */}
+                <img src="/logo.png" alt="Logo" className="w-40 h-auto mb-4" />
+
+                {/* Color Swatches Group */}
+                <Group className="bg-gray-700 p-2 border rounded-lg flex-col gap-4 w-14">
+                    {SWATCHES.map((swatchColor: string) => (
+                        <ColorSwatch
+                            key={swatchColor}
+                            color={swatchColor}
+                            onClick={() => setColor(swatchColor)}
+                            className="w-8 h-8" // Adjust size of swatches if needed
+                        />
+                    ))}
+                </Group>
             </div>
 
             <canvas
