@@ -255,7 +255,7 @@ export default function Home() {
                             key={swatchColor}
                             color={swatchColor}
                             onClick={() => setColor(swatchColor)}
-                            className="w-8 h-8" // Adjust size of swatches if needed
+                            className="w-12 h-12" // Adjust size of swatches if needed
                         />
                     ))}
                 </Group>
