@@ -225,7 +225,7 @@ export default function Home() {
                     variant="default"
                     color="black"
                 >
-                    Reset
+                    Clear
                 </Button>
 
                 {/* Calculate Button */}
